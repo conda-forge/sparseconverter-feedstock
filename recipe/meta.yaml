@@ -1,5 +1,5 @@
 {% set name = "sparseconverter" %}
-{% set version = "0.3.2" %}
+{% set version = "0.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/sparseconverter-{{ version }}.tar.gz
-  sha256: 5783e2ed236d15023a18d654b1e2617b444e91e3189c3bde66c664dd0e5df8bb
+  sha256: 1e3c37b26809e306c5786626f75f61dd0a17b9eda1ff74e529d1f2a8895b5be8
 
 build:
   noarch: python
