@@ -31,8 +31,15 @@ test:
     - sparseconverter
   commands:
     - pip check
+    - pytest --durations=10 --cov=sparseconverter --cov-report=term --cov-config=setup.cfg tests/
   requires:
     - pip
+    - pytest
+    - pytest-cov
+  source_files:
+    - tests
+    - pytest.ini
+    - setup.cfg
 
 about:
   home: https://github.com/LiberTEM/sparseconverter
