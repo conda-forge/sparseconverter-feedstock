@@ -38,7 +38,7 @@ test:
     - pytest-cov
   source_files:
     - tests
-    - pytest.ini
+#    - pytest.ini  - not yet included in sdist - uncomment once that's changed
     - setup.cfg
 
 about:
