@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -22,7 +22,7 @@ requirements:
   run:
     - python >=3.7
     - numpy
-    - scipy <1.11
+    - scipy
     - sparse >=0.12
     - typing-extensions
 
@@ -31,8 +31,15 @@ test:
     - sparseconverter
   commands:
     - pip check
+    - pytest --durations=10 --cov=sparseconverter --cov-report=term --cov-config=setup.cfg tests/
   requires:
     - pip
+    - pytest
+    - pytest-cov
+  source_files:
+    - tests
+#    - pytest.ini  - not yet included in sdist - uncomment once that's changed
+    - setup.cfg
 
 about:
   home: https://github.com/LiberTEM/sparseconverter
